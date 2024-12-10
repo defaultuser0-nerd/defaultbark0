@@ -122,8 +122,8 @@ namespace Grate.GUI
             {
                 grate = new Material[]
                 {
-                    Plugin.grateBundle.LoadAsset<Material>("Zipline Rope Material"),
-                    Plugin.grateBundle.LoadAsset<Material>("Metal Material") 
+                    Plugin.grateBundle.LoadAsset<Material>("C_Crystal_Chunk"),
+                    Plugin.grateBundle.LoadAsset<Material>("C_Crystal_Chunk") 
                 };
                 bark = new Material[]
                 {
