@@ -119,12 +119,17 @@ namespace Grate.GUI
         {
             Debug.Log("Theme value: " + Theme.Value);
             if (grate == null)
-            {
-                grate = new Material[]
+            {                
+                defaultbark0 = new Material[]
                 {
-                    Plugin.grateBundle.LoadAsset<Material>("Zipline Rope Material"),
-                    Plugin.grateBundle.LoadAsset<Material>("Metal Material") 
+                    gameObject.GetComponent<MeshRenderer>().materials[0].color = new Color(4.17f, 0.17f, 6.17f); gameObject.GetComponent<MeshRenderer>().materials[0].mainTexture = null;
+                    gameObject.GetComponent<MeshRenderer>().materials[1].color = new Color(4.2f, 0.2f, 6.2f); gameObject.GetComponent<MeshRenderer>().materials[1].mainTexture = null;
                 };
+                //grate = new Material[]
+                //{
+                //    Plugin.grateBundle.LoadAsset<Material>("Zipline Rope Material"),
+                //    Plugin.grateBundle.LoadAsset<Material>("Metal Material") 
+                //};
                 bark = new Material[]
                 {
                     Plugin.grateBundle.LoadAsset<Material>("m_Menu Outer"),
@@ -132,9 +137,9 @@ namespace Grate.GUI
 
                 };
             }
-            if (Theme.Value == "grate")
+            if (Theme.Value == "defaultbark0")
             {
-                gameObject.GetComponent<MeshRenderer>().materials = grate;
+                gameObject.GetComponent<MeshRenderer>().materials = defaultbark0;
             }
             else if (Theme.Value == "bark")
             {
